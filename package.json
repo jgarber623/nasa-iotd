@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "nasa-iotd",
+  "homepage": "https://github.com/jgarber623/nasa-iotd",
+  "author": {
+    "name": "Jason Garber",
+    "email": "jason@sixtwothree.org",
+    "url": "https://sixtwothree.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jgarber623/nasa-iotd"
+  }
+}
