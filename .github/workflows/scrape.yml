@@ -1,0 +1,30 @@
+name: Scrape
+
+on:
+  schedule:
+    - cron: "0 9,18 * * *"
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    name: Scrape NASA Search API
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: npm
+      - run: npm ci
+      - name: Run scraper scripts
+        run: node ./lib/scraper.js
+      - name: Commit and push changed files
+        run: |
+          git diff
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'github-actions[bot]'
+          git add -A
+          git commit -m "🤖 Automated update (`date +%FT%T%z`)" || exit 0
+          git push
