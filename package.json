@@ -11,6 +11,13 @@
     "type": "git",
     "url": "https://github.com/jgarber623/nasa-iotd"
   },
+  "scripts": {
+    "build": "eleventy --quiet",
+    "clean": "rm -rf public",
+    "prebuild": "npm run clean",
+    "prestart": "npm run clean",
+    "start": "eleventy --quiet --serve"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@jgarber/eslint-config": "^0.2.0",
