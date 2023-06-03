@@ -10,5 +10,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jgarber623/nasa-iotd"
+  },
+  "devDependencies": {
+    "node-fetch": "^2.6.11",
+    "turndown": "^7.1.2"
   }
 }
