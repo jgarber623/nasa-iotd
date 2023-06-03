@@ -12,6 +12,7 @@
     "url": "https://github.com/jgarber623/nasa-iotd"
   },
   "devDependencies": {
+    "@jgarber/eslint-config": "^0.2.0",
     "node-fetch": "^2.6.11",
     "turndown": "^7.1.2"
   }
