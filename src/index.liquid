@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ app.name }}</title>
+
+  <link rel="alternate" href="/feed.atom" title="Atom v1.0" type="application/atom+xml">
+  <link rel="alternate" href="/feed.json" title="JSON Feed v1.1" type="application/feed+json">
+  <link rel="apple-touch-icon" href="/{{ app.icons[1].src }}">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <meta name="apple-mobile-web-app-title" content="{{ app.short_name }}">
+  <meta name="application-name" content="{{ app.short_name }}">
+  <meta name="description" content="{{ app.description }}">
+  <meta name="theme-color" content="{{ app.theme_color }}">
+
+  <meta property="og:author_name" content="{{ pkg.author.name }}">
+  <meta property="og:author_url" content="{{ pkg.author.url }}">
+  <meta property="og:description" content="{{ app.description }}">
+  <meta property="og:title" content="{{ app.name }}">
+  <meta property="og:url" content="{{ app.start_url }}">
+
+  <style>
+    html { background-color: #fafafa; font-family: sans-serif; }
+    body { margin: 2rem; }
+    a { color: {{ app.theme_color }}; }
+    .wrapper { margin: 0 auto; max-width: 48rem; }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <header role="banner">
+      <h1>{{ app.name }}</h1>
+    </header>
+
+    <main role="main">
+      <p>Add any of the following URLs to your preferred feed reader:</p>
+      <ul>
+        <li><a href="/feed.atom" rel="alternate" type="application/atom+xml">Atom v1.0</li>
+        <li><a href="/feed.json" rel="alternate" type="application/feed+json">JSON Feed v1.1</a></li>
+      </ul>
+    </main>
+
+    <hr>
+
+    <footer role="contentinfo">
+      <p>Source code available on <a href="{{ pkg.repository.url }}" rel="source">GitHub</a>.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
