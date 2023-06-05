@@ -1,3 +1,6 @@
 {
-  "extends": "@jgarber/eslint-config/eleventy"
+  "extends": "@jgarber/eslint-config/eleventy",
+  "env": {
+    "es6": true
+  }
 }
