@@ -1,0 +1,34 @@
+---
+eleventyExcludeFromCollections: true
+permalink: "/feed.atom"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>{{ permalink | htmlBaseUrl: app.start_url }}</id>
+  <title>{{ app.name }}</title>
+  <updated>{{ "now" | date }}</updated>
+  {%- for author in iotd.authors %}
+  <author>
+    <name>{{ author.name }}</name>
+  </author>
+  {%- endfor %}
+  <link rel="alternate" href="{{ apod.url }}" type="text/html" />
+  <link rel="self" href="{{ permalink | htmlBaseUrl: app.start_url }}" type="application/atom+xml" />
+  <icon>{{ app.icons[0].src | htmlBaseUrl: app.start_url }}</icon>
+  <logo>{{ app.icons[1].src | htmlBaseUrl: app.start_url }}</logo>
+  <subtitle>{{ app.description }}</subtitle>
+  {%- for post in collections.post | head(30) %}
+  <entry>
+    <id>{{ post.data.canonical_url }}</id>
+    <title>{{ post.data.title | markdown: "inline" }}</title>
+    <updated>{{ post.date | date }}</updated>
+    <author>
+      <name>{{ post.author }}</name>
+    </author>
+    <content type="html">
+      <![CDATA[{% renderFile "./src/_includes/post.liquid", post %}]]>
+    </content>
+    <link rel="alternate" href="{{ post.data.canonical_url }}" type="text/html" />
+  </entry>
+  {%- endfor %}
+</feed>
