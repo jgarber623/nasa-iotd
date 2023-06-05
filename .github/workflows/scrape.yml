@@ -28,3 +28,10 @@ jobs:
           git add -A
           git commit -m "🤖 Automated update (`date +%FT%T%z`)" || exit 0
           git push
+  build:
+    name: Build
+    permissions:
+      id-token: write
+      pages: write
+    needs: scrape
+    uses: ./.github/workflows/build.yml
