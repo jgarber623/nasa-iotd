@@ -39,7 +39,7 @@ module.exports = class {
       favicon: this.htmlBaseUrl(app.icons[0].src, app.start_url),
       authors: iotd.authors,
       language: app.lang,
-      items: items
+      items
     });
   }
 };
