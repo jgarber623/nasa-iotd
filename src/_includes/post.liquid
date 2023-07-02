@@ -1,7 +1,7 @@
 <article class="h-entry" id="post-{{ date | date: dates.iso8601 }}">
   <div class="e-content">
     <figure>
-      <img src="{{ data.image_url }}" alt="{{ data.image_alt }}" aria-details="post-{{ date | date: dates.iso8601 }}" class="u-photo">
+      <img src="{{ data.imageUrl }}" alt="{{ data.imageAlt }}" aria-details="post-{{ date | date: dates.iso8601 }}" class="u-photo">
     </figure>
 
     <div id="post-{{ date | date: dates.iso8601 }}">{{ content }}</div>
@@ -10,6 +10,6 @@
   <hr>
 
   <footer>
-    <p><small><a href="{{ data.canonical_url }}" rel="canonical" class="p-name u-uid u-url">{{ data.title }}</a> was published on <time class="dt-published" datetime="{{ date | date }}">{{ date | date: dates.display }}</time>.</small></p>
+    <p><small><a href="{{ data.canonicalUrl }}" rel="canonical" class="p-name u-uid u-url">{{ data.title }}</a> was published on <time class="dt-published" datetime="{{ date | date }}">{{ date | date: dates.display }}</time>.</small></p>
   </footer>
 </article>

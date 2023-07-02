@@ -19,7 +19,7 @@ permalink: "/feed.atom"
   <subtitle>{{ app.description }}</subtitle>
   {%- for post in collections.post | head(30) %}
   <entry>
-    <id>{{ post.data.canonical_url }}</id>
+    <id>{{ post.data.canonicalUrl }}</id>
     <title>{{ post.data.title | markdown: "inline" }}</title>
     <updated>{{ post.date | date }}</updated>
     <author>
@@ -28,7 +28,7 @@ permalink: "/feed.atom"
     <content type="html">
       <![CDATA[{% renderFile "./src/_includes/post.liquid", post %}]]>
     </content>
-    <link rel="alternate" href="{{ post.data.canonical_url }}" type="text/html" />
+    <link rel="alternate" href="{{ post.data.canonicalUrl }}" type="text/html" />
   </entry>
   {%- endfor %}
 </feed>

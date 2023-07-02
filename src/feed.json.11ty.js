@@ -14,11 +14,11 @@ module.exports = class {
         .slice(0, 30)
         .map(async post => {
           return {
-            id: post.data.canonical_url,
-            url: post.data.canonical_url,
+            id: post.data.canonicalUrl,
+            url: post.data.canonicalUrl,
             title: this.markdown(post.data.title, 'inline'),
             content_html: await this.renderFile('./src/_includes/post.liquid', post),
-            image: post.data.image_url,
+            image: post.data.imageUrl,
             date_published: post.date,
             authors: [
               {
