@@ -14,13 +14,16 @@
   "scripts": {
     "build": "eleventy --quiet",
     "clean": "rm -rf public",
+    "lint": "eslint .",
     "prebuild": "npm run clean",
     "prestart": "npm run clean",
-    "start": "eleventy --quiet --serve"
+    "pretest": "npm run build",
+    "start": "eleventy --quiet --serve",
+    "test": "test -f ./_site/index.html"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@jgarber/eslint-config": "^0.2.0",
+    "@jgarber/eslint-config": "^1.1.0",
     "markdown-it": "^13.0.1",
     "node-fetch": "^2.6.11",
     "turndown": "^7.1.2"
