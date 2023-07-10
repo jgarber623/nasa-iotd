@@ -6,6 +6,13 @@
 
   <title>{{ app.name }}</title>
 
+  <style>
+    html { background-color: #fafafa; font-family: sans-serif; }
+    body { margin: 2rem; }
+    a { color: {{ app.theme_color }}; }
+    .wrapper { margin: 0 auto; max-width: 48rem; }
+  </style>
+
   <link rel="alternate" href="/feed.atom" title="Atom v1.0" type="application/atom+xml">
   <link rel="alternate" href="/feed.json" title="JSON Feed v1.1" type="application/feed+json">
   <link rel="apple-touch-icon" href="/{{ app.icons[1].src }}">
@@ -22,13 +29,6 @@
   <meta property="og:description" content="{{ app.description }}">
   <meta property="og:title" content="{{ app.name }}">
   <meta property="og:url" content="{{ app.start_url }}">
-
-  <style>
-    html { background-color: #fafafa; font-family: sans-serif; }
-    body { margin: 2rem; }
-    a { color: {{ app.theme_color }}; }
-    .wrapper { margin: 0 auto; max-width: 48rem; }
-  </style>
 </head>
 <body>
 
