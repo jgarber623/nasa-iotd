@@ -1,5 +1,8 @@
 # nasa-iotd
 
+[![Build](https://img.shields.io/github/actions/workflow/status/jgarber623/nasa-iotd/build.yml?branch=main&logo=github&style=for-the-badge)](https://github.com/jgarber623/nasa-iotd/actions/workflows/build.yml)
+[![Scrape](https://img.shields.io/github/actions/workflow/status/jgarber623/nasa-iotd/scrape.yml?branch=main&label=Scrape&logo=github&style=for-the-badge)](https://github.com/jgarber623/nasa-iotd/actions/workflows/scrape.yml)
+
 Providing a feed of content from NASA's [Image of the Day](https://www.nasa.gov/multimedia/imagegallery/iotd.html) (IotD) website.
 
 I _love_ the IotD website, but it doesn't provide any subscribable feed (as far as I could find).
