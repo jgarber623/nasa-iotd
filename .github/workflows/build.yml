@@ -2,20 +2,25 @@ name: Build
 
 on:
   push:
-  workflow_call:
   workflow_dispatch:
+  workflow_run:
+    workflows: [Scrape]
+    types: [completed]
+    branches: [main]
 
 jobs:
+  ci:
+    name: CI
+    uses: ./.github/workflows/ci.yml
   build:
     name: Build and publish to GitHub Pages
     permissions:
       id-token: write
       pages: write
+    needs: ci
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: ${{ github.ref }}
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version-file: ".nvmrc"

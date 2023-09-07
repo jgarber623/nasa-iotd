@@ -12,7 +12,7 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version-file: ".nvmrc"
@@ -28,10 +28,3 @@ jobs:
           git add -A
           git commit -m "🤖 Automated update (`date +%FT%T%z`)" || exit 0
           git push
-  build:
-    name: Build
-    permissions:
-      id-token: write
-      pages: write
-    needs: scrape
-    uses: ./.github/workflows/build.yml
