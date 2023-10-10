@@ -24,6 +24,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@jgarber/eslint-config": "^2.0.0",
+    "cheerio": "^1.0.0-rc.12",
     "markdown-it": "^13.0.2",
     "node-fetch": "^2.7.0",
     "turndown": "^7.1.2"
