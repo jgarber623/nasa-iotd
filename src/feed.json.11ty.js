@@ -13,6 +13,7 @@ module.exports = class {
         .reverse()
         .slice(0, 30)
         .map(async post => {
+          /* eslint-disable sort-keys */
           return {
             id: post.data.canonicalUrl,
             url: post.data.canonicalUrl,
@@ -26,9 +27,11 @@ module.exports = class {
               }
             ]
           };
+          /* eslint-enable sort-keys */
         })
     );
 
+    /* eslint-disable sort-keys */
     return JSON.stringify({
       version: 'https://jsonfeed.org/version/1.1',
       title: app.name,
@@ -41,5 +44,6 @@ module.exports = class {
       language: app.lang,
       items
     });
+    /* eslint-enable sort-keys */
   }
 };
