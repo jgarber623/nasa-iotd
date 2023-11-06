@@ -1,6 +1,9 @@
 const { EleventyHtmlBasePlugin, EleventyRenderPlugin } = require('@11ty/eleventy');
 
 module.exports = function(eleventyConfig) {
+  // Front Matter Data
+  eleventyConfig.setFrontMatterParsingOptions({ language: 'json' });
+
   // Global Data
   eleventyConfig.addGlobalData('app', require('./src/manifest.webmanifest.json'));
 
