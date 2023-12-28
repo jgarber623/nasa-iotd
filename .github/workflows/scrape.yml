@@ -7,7 +7,7 @@ on:
 
 jobs:
   scrape:
-    name: Scrape NASA Search API
+    name: Scrape NASA Image of the Day website
     permissions:
       contents: write
     runs-on: ubuntu-latest
