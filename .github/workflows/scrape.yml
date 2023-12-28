@@ -20,6 +20,7 @@ jobs:
       - run: npm ci
       - name: Run scraper scripts
         run: node ./lib/scraper.js
+        continue-on-error: true
       - name: Commit and push changed files
         run: |
           git diff
