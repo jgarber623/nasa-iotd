@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "eleventy --quiet",
-    "clean": "rm -rf public",
+    "clean": "rm -rf _site",
     "lint": "eslint .",
     "prebuild": "npm run clean",
     "prestart": "npm run clean",
