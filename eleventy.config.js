@@ -16,13 +16,10 @@ module.exports = function(eleventyConfig) {
     });
 
   // Libraries
-  eleventyConfig.setLibrary('md', require('./lib/libraries/markdown.js'));
   eleventyConfig.setLiquidOptions(require('./lib/libraries/liquid.js'));
 
-  // Filters
-  eleventyConfig.addFilter('markdown', require('./lib/filters/markdown.js'));
-
   // Plugins
+  eleventyConfig.addPlugin(require('@jgarber/eleventy-plugin-markdown'));
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
 
