@@ -1,13 +1,16 @@
-const config = require('@jgarber/eslint-config');
+module.exports = (async () => {
+  const { default: config } = await import("@jgarber/eslint-config");
 
-module.exports = [
-  ...config,
-  {
-    files: ['lib/**/*.js'],
-    languageOptions: {
-      globals: {
-        fetch: 'readonly'
-      }
-    }
-  }
-];
+  return [
+    { ignores: ["_site"] },
+    ...config,
+    {
+      files: ["lib/**/*.js"],
+      languageOptions: {
+        globals: {
+          fetch: "readonly",
+        },
+      },
+    },
+  ];
+})();
