@@ -7,10 +7,7 @@
     "email": "jason@sixtwothree.org",
     "url": "https://sixtwothree.org"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jgarber623/nasa-iotd"
-  },
+  "repository": "github:jgarber623/nasa-iotd",
   "scripts": {
     "build": "eleventy --quiet",
     "clean": "rm -rf _site",
