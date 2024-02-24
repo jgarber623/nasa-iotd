@@ -24,7 +24,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@jgarber/eleventy-plugin-markdown": "^0.1.2",
-    "@jgarber/eslint-config": "^3.0.0",
+    "@jgarber/eslint-config": "^4.2.1",
     "cheerio": "^1.0.0-rc.12",
     "turndown": "^7.1.2"
   }
