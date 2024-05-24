@@ -7,10 +7,10 @@
   <title>{{ app.name }}</title>
 
   <style>
-    html { background-color: #fafafa; font-family: sans-serif; }
-    body { margin: 2rem; }
-    a { color: {{ app.theme_color }}; }
-    .wrapper { margin: 0 auto; max-width: 48rem; }
+    html { background-color: {{ app.theme_color }}; }
+    body { margin: 2rem auto; max-width: 48rem; padding: 0 2rem; }
+    ul { display: flex; gap: 1rem; list-style: none; padding: 0; }
+    li a { background: silver; box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf; display: inline-block; padding: 0.5rem 1rem; }
   </style>
 
   <link rel="alternate" href="/feed.atom" title="Atom v1.0" type="application/atom+xml">
@@ -33,25 +33,23 @@
 </head>
 <body>
 
-  <div class="wrapper">
-    <header role="banner">
-      <h1>{{ app.name }}</h1>
-    </header>
+  <header>
+    <h1>{{ app.name }}</h1>
+  </header>
 
-    <main role="main">
-      <p>Add any of the following URLs to your preferred feed reader:</p>
-      <ul>
-        <li><a href="/feed.atom" rel="alternate" type="application/atom+xml">Atom v1.0</li>
-        <li><a href="/feed.json" rel="alternate" type="application/feed+json">JSON Feed v1.1</a></li>
-      </ul>
-    </main>
+  <main>
+    <p>Add any of the following URLs to your preferred feed reader:</p>
+    <ul>
+      <li><a href="/feed.atom" rel="alternate" type="application/atom+xml">Atom v1.0</li>
+      <li><a href="/feed.json" rel="alternate" type="application/feed+json">JSON Feed v1.1</a></li>
+    </ul>
+  </main>
 
-    <hr>
+  <hr>
 
-    <footer role="contentinfo">
-      <p>Source code available on <a href="{{ pkg.homepage }}" rel="source">GitHub</a>.</p>
-    </footer>
-  </div>
+  <footer>
+    <p>Source code available on <a href="{{ pkg.homepage }}" rel="source">GitHub</a>.</p>
+  </footer>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "background_color": "#5d7fb9",
+  "background_color": "#fafafa",
   "description": "NASA.gov brings you the latest images, videos and news from America's space agency. Get the latest updates on NASA missions, watch NASA TV live, and learn about our quest to reveal the unknown and benefit all humankind.",
   "icons": [
     {
@@ -18,5 +18,5 @@
   "name": "NASA Image of the Day",
   "short_name": "NASA IotD",
   "start_url": "https://jgarber623.github.io/nasa-iotd/",
-  "theme_color": "#5d7fb9"
+  "theme_color": "#fafafa"
 }
