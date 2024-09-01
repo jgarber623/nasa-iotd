@@ -23,7 +23,7 @@
     "@jgarber/eleventy-plugin-liquid": "^1.0.0",
     "@jgarber/eleventy-plugin-markdown": "^1.0.0",
     "@jgarber/eslint-config": "^6.1.0",
-    "cheerio": "^1.0.0-rc.12",
+    "cheerio": "^1.0.0",
     "turndown": "^7.2.0"
   },
   "engines": {
