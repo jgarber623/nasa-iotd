@@ -7,6 +7,7 @@
     "email": "jason@sixtwothree.org",
     "url": "https://sixtwothree.org"
   },
+  "type": "module",
   "repository": "github:jgarber623/nasa-iotd",
   "scripts": {
     "build": "npx eleventy --quiet",
