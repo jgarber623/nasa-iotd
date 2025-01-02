@@ -9,20 +9,17 @@
   },
   "repository": "github:jgarber623/nasa-iotd",
   "scripts": {
-    "build": "eleventy --quiet",
-    "clean": "rm -rf _site",
-    "lint": "eslint .",
-    "prebuild": "npm run clean",
-    "prestart": "npm run clean",
+    "build": "npx eleventy --quiet",
+    "lint": "npx eslint .",
     "pretest": "npm run build",
-    "start": "eleventy --quiet --serve",
+    "start": "npm run build -- --serve",
     "test": "test -f ./_site/index.html"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@jgarber/eleventy-plugin-liquid": "^1.0.0",
     "@jgarber/eleventy-plugin-markdown": "^1.0.0",
-    "@jgarber/eslint-config": "^6.1.0",
+    "@jgarber/eslint-config": "^7.0.0",
     "cheerio": "^1.0.0",
     "turndown": "^7.2.0"
   },
