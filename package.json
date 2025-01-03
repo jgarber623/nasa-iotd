@@ -8,7 +8,7 @@
     "url": "https://sixtwothree.org"
   },
   "type": "module",
-  "repository": "github:jgarber623/nasa-iotd",
+  "repository": "https://github.com/jgarber623/nasa-iotd",
   "scripts": {
     "build": "npx eleventy --quiet",
     "lint": "npx eslint .",
