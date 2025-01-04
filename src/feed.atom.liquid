@@ -19,7 +19,7 @@
   <icon>{{ app.icons[0].src | htmlBaseUrl: app.start_url }}</icon>
   <logo>{{ app.icons[1].src | htmlBaseUrl: app.start_url }}</logo>
   <subtitle>{{ app.description }}</subtitle>
-  {%- for post in collections.post | head(30) %}
+  {%- for post in collections.post reversed limit: 30 %}
   <entry>
     <id>{{ post.data.canonicalUrl }}</id>
     <title>{{ post.data.title | markdown: "inline" }}</title>

@@ -10,7 +10,7 @@ export default class {
     const items = await Promise.all(
       collections
         .post
-        .reverse()
+        .toReversed()
         .slice(0, 30)
         .map(async (post) => {
           /* eslint-disable sort-keys */
