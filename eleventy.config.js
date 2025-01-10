@@ -1,21 +1,24 @@
-import { readFileSync } from "node:fs";
-
 import { EleventyHtmlBasePlugin, EleventyRenderPlugin } from "@11ty/eleventy";
 
 import eleventyPluginLiquid from "@jgarber/eleventy-plugin-liquid";
 import eleventyPluginMarkdown from "@jgarber/eleventy-plugin-markdown";
+
+import manifest from "./src/manifest.webmanifest.json" with { type: "json" };
 
 export default function(eleventyConfig) {
   // Front Matter Data
   eleventyConfig.setFrontMatterParsingOptions({ language: "json" });
 
   // Global Data
-  eleventyConfig.addGlobalData("app", JSON.parse(readFileSync("./src/manifest.webmanifest")));
+  eleventyConfig.addGlobalData("app", manifest);
 
   // Passthrough File Copy
   eleventyConfig
     .addPassthroughCopy("./src/assets")
-    .addPassthroughCopy("./src/*.{ico,webmanifest}");
+    .addPassthroughCopy("./src/*.ico")
+    .addPassthroughCopy({
+      "./src/manifest.webmanifest.json": "manifest.webmanifest",
+    });
 
   // Plugins
   eleventyConfig.addPlugin(eleventyPluginLiquid, {
